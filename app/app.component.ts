@@ -1,30 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 import { MatIconModule } from '@angular/material/icon';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import MailIcon from '@mui/icons-material/Mail';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { SignupComponent } from './signup/signup.component';
-import { RouterModule } from '@angular/router';
-import { Router } from '@angular/router';
-
-
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,FormsModule,MatIconModule,SignupComponent,RouterModule],
+  imports: [CommonModule, RouterOutlet,SignUpComponent,SignInComponent,MatIconModule,RouterModule,FormsModule],
   templateUrl: './app.component.html',
+
 })
 export class AppComponent {
-  title = 'Shopkart';
-  constructor() {}
-
-
- }
-
-  
+  title = 'Shopkart-app';
+}
